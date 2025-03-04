@@ -7,6 +7,22 @@
   "type": "commonjs",
   "main": "/dist/server.js",
   "scripts": {
-    "test": "tsc || node /dist/server.js"
+    "test": "tsc || node /dist/server.js",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "lint": "eslint src/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.21.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
