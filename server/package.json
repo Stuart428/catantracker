@@ -11,7 +11,9 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "db:deploy": "ts-node src/deploy-db.ts",
+    "db:reset": "ts-node src/deploy-db.ts --reset"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
@@ -23,6 +25,8 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
   }
 }
